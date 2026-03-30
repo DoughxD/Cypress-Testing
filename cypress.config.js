@@ -8,7 +8,7 @@ module.exports = defineConfig({
         process.exit(0)
       })
     },
-    baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+    baseUrl: "https://opensource-demo.orangehrmlive.com/web/index.php",
     viewportWidth: 1280,
     viewportHeight: 720,
   },

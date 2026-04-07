@@ -1,12 +1,14 @@
 import userData from '../fixtures/users/userData.json'
 import selectorsList from '../fixtures/users/selectorsList.json'
 import LoginPage from '../pages/loginPage.js'
+import MyInfoPage from '../pages/mytInfoPage.js'
 
 
 const loginPage = new LoginPage()
+const myInfoPage = new MyInfoPage()
 
 
-  it.only('Login with class', () =>{
+  it('Login with class', () =>{
     loginPage.accessLoginPage()
     loginPage.loginWithUser(userData.userSuccess.username, userData.userSuccess.password)
 
@@ -14,20 +16,18 @@ const loginPage = new LoginPage()
 
   })
   
-  // it.skip('Login - Fail', () => {
-  //   cy.get('[name="username"]').type(userData.userFail.username)
-  //   cy.get('[name="password"]').type(userData.userFail.password)
-  //   cy.get('.oxd-button').click()
-  //   cy.get("[role='alert']")
+   it('Login - Fail', () => {
+    loginPage.accessLoginPage()
+    loginPage.loginWithWrongUser(userData.userFail.username, userData.userFail.password)
 
     
-  // })
+   })
 
-  // it.skip('fields - Success', () => {
-  //   cy.visit('/auth/login')
-  //   cy.get(selectorsList.usernameField).type(userData.userSuccess.username)
-  //   cy.get(selectorsList.passwordField).type(userData.userSuccess.password)
-  //   cy.get(selectorsList.loginButton).click()
+  it.only('my info change', () => {
+    loginPage.accessLoginPage()
+    loginPage.loginWithUser(userData.userSuccess.username, userData.userSuccess.password)
+    myInfoPage.myInfoChange()
+  //   
   //   cy.get(selectorsList.myInfoButton).click()
   //   cy.get(selectorsList.firstNameField).clear().type('Jonas')
   //   cy.get(selectorsList.middleNameField).clear().type('Silva')
@@ -43,7 +43,7 @@ const loginPage = new LoginPage()
   //   cy.get('.oxd-radio-input').eq(1).click()
     
    
-  //})
+  })
 
 
 

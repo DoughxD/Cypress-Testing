@@ -1,9 +1,7 @@
 {
 
 "usernameField": "[name ='username']",
-    "passwordField": "[name='password']",
-    "loginButton": ".oxd-button",
-    "sectionTitleTopBar": ".oxd-topbar-header-title",
+    
     "dashboardGrid": ".orangehrm-dashboard-grid",
     "wrongCredentialAlert": "[role='alert']",
     "myInfoButton": "[href='/web/index.php/pim/viewMyDetails']",
@@ -11,6 +9,7 @@
     "middleNameField":"[placeholder='Middle Name']",
     "lastNameField": ".orangehrm-lastname[placeholder='Last Name']",
     "textInputActive": ".oxd-input--active",
-    "boxInputGroup": ".oxd-input-group"
+    "boxInputGroup": ".oxd-input-group",
+    "downFillInput":".bi-caret-down-fill"
 
 }

@@ -1,11 +1,13 @@
 import userData from '../fixtures/users/userData.json'
 import selectorsList from '../fixtures/users/selectorsList.json'
-import LoginPage from '../pages/loginPage.js'
-import MyInfoPage from '../pages/mytInfoPage.js'
+import LoginPage from '../pages/loginPage'
+import MyInfoPage from '../pages/mytInfoPage'
+import MenuPage from '../pages/menuPage'
 
 
 const loginPage = new LoginPage()
 const myInfoPage = new MyInfoPage()
+const menuPage = new MenuPage()
 
 
   it('Login with class', () =>{
@@ -26,22 +28,8 @@ const myInfoPage = new MyInfoPage()
   it.only('my info change', () => {
     loginPage.accessLoginPage()
     loginPage.loginWithUser(userData.userSuccess.username, userData.userSuccess.password)
+    menuPage.accessPage()
     myInfoPage.myInfoChange()
-  //   
-  //   cy.get(selectorsList.myInfoButton).click()
-  //   cy.get(selectorsList.firstNameField).clear().type('Jonas')
-  //   cy.get(selectorsList.middleNameField).clear().type('Silva')
-  //   cy.get(selectorsList.lastNameField).clear().type('Cerqueira')
-  //   cy.get(selectorsList.textInputActive).eq(3).clear().type('15615')
-  //   cy.get(selectorsList.textInputActive).eq(4).clear().type('5691958419')
-  //   cy.get(selectorsList.textInputActive).eq(5).clear().type('aqui é o 5')
-  //   cy.get(selectorsList.textInputActive).eq(6).clear().type('2000-01-01')
-  //   cy.get(selectorsList.textInputActive).eq(7).clear().type('2000-01-01')
-    
-  //   cy.get(selectorsList.boxInputGroup).eq(8).click().contains('Brazilian').click()
-  //   cy.get(selectorsList.boxInputGroup).eq(9).click().contains('Married').click()
-  //   cy.get('.oxd-radio-input').eq(1).click()
-    
    
   })
 

@@ -1,4 +1,4 @@
-#my cypress automation
+# my cypress automation
 
 ## 📋 About the Project
 

@@ -29,7 +29,9 @@ const menuPage = new MenuPage()
     loginPage.accessLoginPage()
     loginPage.loginWithUser(userData.userSuccess.username, userData.userSuccess.password)
     menuPage.accessPage()
-    myInfoPage.myInfoChange()
+    myInfoPage.changePersonalDetails('jão', 'silva', 'pinto')
+    myInfoPage.changeEmployeeDetails('55555', '6666', '7777', '2030-05-10', '1994-05-14', 'Brazilian', 'Married')
+    myInfoPage.saveInfo()
    
   })
 

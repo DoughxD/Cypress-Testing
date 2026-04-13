@@ -1,7 +1,7 @@
 class LoginPage{
     selectorsList() {
         const selectors = {
-            "usernameField": "[name ='username']",
+            "usernameField": "[name='username']",
             "passwordField": "[name='password']",
             "loginButton": ".oxd-button",
             "sectionTitleTopBar": ".oxd-topbar-header-title"

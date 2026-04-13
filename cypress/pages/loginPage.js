@@ -4,7 +4,8 @@ class LoginPage{
             "usernameField": "[name='username']",
             "passwordField": "[name='password']",
             "loginButton": ".oxd-button",
-            "sectionTitleTopBar": ".oxd-topbar-header-title"
+            "sectionTitleTopBar": ".oxd-topbar-header-title",
+            "oxdAlert": ".oxd-alert"
         }
         return selectors
 
@@ -30,7 +31,9 @@ class LoginPage{
 
     }
 
-  
+    checkInvalidAccess(){
+        cy.get(this.selectorsList().oxdAlert).shoud()
+    }
 }
 
 export default LoginPage

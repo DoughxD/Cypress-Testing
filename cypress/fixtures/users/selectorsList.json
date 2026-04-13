@@ -1,9 +1,0 @@
-{
-
-"usernameField": "[name ='username']",
-    
-    "dashboardGrid": ".orangehrm-dashboard-grid",
-    "wrongCredentialAlert": "[role='alert']"
-    
-
-}
